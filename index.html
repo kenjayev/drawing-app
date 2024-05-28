@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing app</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <!-- navbar -->
+    <div class="nav">
+      <div class="clr active" data-clr="#000"></div>
+      <div class="clr" data-clr="red"></div>
+      <div class="clr" data-clr="orange"></div>
+      <div class="clr" data-clr="blue"></div>
+      <div class="clr" data-clr="purple"></div>
+      <div class="clr" data-clr="yellowgreen"></div>
+      <div class="clr" data-clr="yellow"></div>
+      <div class="clr" data-clr="#fff"></div>
+
+      <button id="clear">Clear</button>
+      <button id="save">Save</button>
+
+      <input type="color" name="color" value="#ffffff" id="bgColor__change" />
+      <input
+        type="range"
+        name="ageInputName"
+        id="ageInputId"
+        value="5"
+        min="1"
+        max="12"
+        oninput="ageOutputId.value = ageInputId.value"
+      />
+      <output id="ageOutputId">5</output>
+      <div id="icon">🎨</div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
