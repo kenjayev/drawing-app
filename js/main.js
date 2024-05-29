@@ -1,11 +1,6 @@
 const canvas = document.querySelector("#canvas");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
-/* window change size then change canvas element size */
-window.addEventListener("resize", function () {
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-});
 
 const ctx = canvas.getContext("2d");
 ctx.lineCap = "round";

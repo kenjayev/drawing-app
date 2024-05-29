@@ -8,6 +8,23 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+.clr_wrapper {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #4568dc, #b06ab3);
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: none;
+}
+.clr_wrapper > .clr {
+  margin: 5px;
+}
 .nav {
   position: fixed;
   top: 1%;
@@ -22,7 +39,7 @@ body {
   border-radius: 10px;
 }
 .nav,
-.nav > div,
+.nav div,
 .nav > input,
 button {
   margin: 5px;
@@ -83,4 +100,13 @@ button:hover {
   color: #fff;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media (max-width: 750px) {
+  .clr_wrapper {
+    display: flex;
+  }
+  .nav > .clr {
+    display: none;
+  }
 }
