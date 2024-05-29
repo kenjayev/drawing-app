@@ -8,55 +8,49 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-.clr_wrapper {
-  position: fixed;
-  bottom: 2%;
-  left: 50%;
-  transform: translateX(-50%);
+
+.top-management__panel,
+.clr-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #4568dc, #b06ab3);
-  padding: 10px;
   border: 2px solid white;
   border-radius: 10px;
-  display: none;
+  background: linear-gradient(to right, #4568dc, #b06ab3);
+  padding: 10px;
 }
-.clr_wrapper > .clr {
-  margin: 5px;
-}
-.nav {
+.top-management__panel {
   position: fixed;
   top: 1%;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(to right, #4568dc, #b06ab3);
-  padding: 10px;
-  border: 2px solid white;
-  border-radius: 10px;
 }
-.nav,
-.nav div,
-.nav > input,
-button {
+.clr-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 0.7%;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+
+input,
+button,
+.clr {
   margin: 5px;
 }
-.clr.active {
-  transform: scale(1.25);
-}
-.clr:hover:not(.clr.active) {
-  transform: scale(1.1);
-}
 .clr {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 2px solid white;
   background-color: #000;
   transition: transform 0.2s;
+}
+.clr.active {
+  transform: scale(1.35);
+}
+.clr:hover:not(.clr.active) {
+  transform: scale(1.15);
 }
 .clr:nth-child(2) {
   background-color: red;
@@ -79,6 +73,7 @@ button {
 .clr:nth-child(8) {
   background-color: #fff;
 }
+
 button {
   border: none;
   outline: none;
@@ -102,11 +97,17 @@ button:hover {
   font-weight: bold;
 }
 
-@media (max-width: 750px) {
-  .clr_wrapper {
-    display: flex;
+@media (max-width: 650px) {
+  .top-management__panel,
+  .clr-wrapper {
+    padding: 5px;
   }
-  .nav > .clr {
-    display: none;
+  .clr-wrapper {
+    position: fixed;
+    top: auto;
+    bottom: 1%;
+    left: 50%;
+    flex-direction: row;
+    transform: translateX(-50%);
   }
 }
